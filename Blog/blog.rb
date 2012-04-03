@@ -26,16 +26,12 @@ module Blog::Models
 	end
 	
 	class PostFields < V 1.0
-		def self.up
+		def self.change
 			create_table Page.table_name do |t|
-				t.string 	:title
+				t.string	:title
 				t.text		:content
 				t.timestamps
 			end
-		end
-		
-		def self.down
-			drop_table Page.table_name
 		end
 	end
 end
