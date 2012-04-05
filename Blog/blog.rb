@@ -27,7 +27,7 @@ module Blog::Models
 	
 	class PostFields < V 1.0
 		def self.change
-			create_table Page.table_name do |t|
+			create_table Post.table_name do |t|
 				t.string	:title
 				t.text		:content
 				t.timestamps
